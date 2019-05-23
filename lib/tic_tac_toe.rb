@@ -118,7 +118,7 @@ class TicTacToe
     # else if the game was a draw
     elsif draw?
       # tell the players it has been a draw
-      puts 'Cats Game!'
+      puts "Cat's Game!"
     end
   end
 end
