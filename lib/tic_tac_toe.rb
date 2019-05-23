@@ -81,4 +81,8 @@ class TicTacToe
     end
     false
   end
+
+  def full?(board)
+    board.all? { |place| place != ' ' }
+  end
 end
