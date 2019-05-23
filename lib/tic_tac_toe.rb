@@ -85,4 +85,8 @@ class TicTacToe
   def full?
     @board.all? { |place| place != ' ' }
   end
+
+  def draw?(board)
+    full?(board) && !won?(board)
+  end
 end
