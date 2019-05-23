@@ -89,4 +89,36 @@ class TicTacToe
   def draw?
     full? && !won?
   end
+
+  def over?(board)
+    if won?(board)
+      return true
+    end
+
+    draw?(board) || full?(board)
+  end
+
+  def winner(board)
+    if won?(board)
+      board[won?(board)[0]]
+    end
+  end
+  # TicTacToe.rb
+  def play(board)
+    # until the game is over
+    until over?(board)
+      # take turns
+      turn(board)
+    end
+
+    # if the game was won
+    if won?(board)
+      # congratulate the winner
+      puts 'Congratulations ' + winner(board) + '!'
+    # else if the game was a draw
+    elsif draw?(board)
+      # tell the players it has been a draw
+      puts 'Cats Game!'
+    end
+  end
 end
