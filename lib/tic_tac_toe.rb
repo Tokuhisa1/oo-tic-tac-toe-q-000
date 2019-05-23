@@ -31,7 +31,7 @@ class TicTacToe
     @board[index] = character
   end
 
-  def position_taken?(board, index)
-    !(board[index] == ' ' || board[index] == '' || board[index] == nil)
+  def position_taken?(index)
+    !(@board[index] == ' ' || @board[index] == '' || @board[index] == nil)
   end
 end
